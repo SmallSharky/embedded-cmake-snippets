@@ -41,7 +41,7 @@ add_compile_options(
     # -Wshadow
     -fdata-sections
     -ffunction-sections
-    -fno-builtin
+    # -fno-builtin
     # -Werror
     $<$<COMPILE_LANGUAGE:Asm>:"-x assembler-with-cpp">
 )
