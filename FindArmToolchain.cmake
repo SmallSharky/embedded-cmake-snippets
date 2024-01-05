@@ -44,7 +44,12 @@ add_compile_options(
     # -fno-builtin
     # -Werror
     $<$<COMPILE_LANGUAGE:Asm>:"-x assembler-with-cpp">
+    $<$<CONFIG:RELEASE>:-O3>
+    $<$<CONFIG:DEBUG>:-O0>
+    $<$<CONFIG:DEBUG>:-g>
+    $<$<CONFIG:DEBUG>:-ggdb>
 )
+
 
 
 add_link_options(
